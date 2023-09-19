@@ -1,9 +1,37 @@
+'use client'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useEffect, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
+
 export const About = () => {
+  const headingRef = useRef(null)
+  const paraRef = useRef(null)
+
+  useEffect(() => {
+    const el = headingRef.current
+    gsap.to(el, {
+      x: 300,
+      duration: 3,
+      scrollTrigger: {
+        trigger: el,
+        start: 'top center',
+        end: 'top 20%',
+        toggleActions: 'play none reverse none',
+        toggleClass: 'red',
+        markers: true
+      }
+    })
+  }, [])
+
   return (
     <div className='h-screen w-full bg-neutral-900 p-10 flex flex-col '>
-      <h1 className='font-bold text-white text-3xl'>ABOUT ME</h1>
+      <h1 ref={headingRef} className='font-bold text-white text-3xl'>
+        ABOUT ME
+      </h1>
       <div className='flex-grow flex items-center'>
-        <p>
+        <p ref={paraRef}>
           My name is Hrishik Shaji.I'm 23 years old.I'm from
           Thrissur,Kerala,India.I'm a son,a brother and a good friend for a
           handful of people. After 10th, i took computer science for plus two
