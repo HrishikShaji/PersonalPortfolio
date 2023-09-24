@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: deutschlander;
+  src: url(Deutschlander-O5we.ttf) format("truetype");
+}
+
+h1{
+	font-family:"deutschlander"
+}
+
+.custom-clip {
+	clip-path: polygon(0 0%, 100% 0, 100% 73%, 0 73%);
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
