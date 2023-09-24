@@ -1,15 +1,59 @@
 'use client'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
+import { useEffect } from 'react'
+import SplitType from 'split-type'
 
 export const About = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    const splitTypes = document.querySelectorAll('.reveal-type')
+    splitTypes.forEach((char, i) => {
+      const text = new SplitType(char, { types: 'chars' })
+      gsap.from(text.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 50%',
+          end: 'top 20%',
+          scrub: true
+        },
+        opacity: 0.2,
+        stagger: 0.5
+      })
+    })
+    const about = document.querySelector('.about')
+    gsap.from(about, {
+      scrollTrigger: {
+        trigger: about,
+        start: 'top 70%',
+        end: 'top 30%',
+        scrub: true
+      },
+      opacity: 0.2,
+      y: -250,
+      x: 500
+    })
+
+    const customPin = document.querySelector('.custom-pin')
+    gsap.to(customPin, {
+      scrollTrigger: {
+        trigger: splitTypes,
+        pin: customPin,
+        start: 'top center',
+        end: 'bottom center',
+        markers: true
+      }
+    })
+  }, [])
   return (
-    <div className='h-screen w-full bg-neutral-900 p-10 flex flex-col '>
-      <h1 className='font-bold text-white text-3xl'>ABOUT ME</h1>
-      <div className='flex-grow flex items-center'>
-        <p>
+    <div className='h-full w-full bg-neutral-900 p-10 pt-[300px] flex '>
+      <div className='w-[30%]'>
+        <div className='custom-pin'>
+          <h1 className='about text-white text-[150px]'>ABOUT ME</h1>
+        </div>
+      </div>
+      <div className='w-[70%] flex items-center pt-40'>
+        <p className='reveal-type text-4xl font-semibold'>
           My name is Hrishik Shaji.I'm 23 years old.I'm from
           Thrissur,Kerala,India.I'm a son,a brother and a good friend for a
           handful of people. After 10th, i took computer science for plus two
