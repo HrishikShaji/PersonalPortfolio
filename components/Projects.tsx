@@ -32,26 +32,43 @@ export const Projects = () => {
     })
 
     console.log(projectTrigger)
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: projectTrigger,
-        start: 'top 80%',
-        end: 'top 30%',
-        scrub: 1
-      }
+    gsap.utils.toArray('.project-trigger').forEach((trigger) => {
+      gsap.to(trigger, {
+        x: 300,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: trigger,
+          scrub: true
+        }
+      })
+      gsap.to(trigger, {
+        y: -100,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: trigger,
+          scrub: true
+        }
+      })
     })
-
-    tl.from(projectTrigger, { x: 500, stagger: 0.5 })
-      .to(projectTrigger, { y: -100, stagger: 0.5 })
-      .to(projectTrigger, { x: -500, stagger: 0.5 })
   }, [])
   return (
-    <div className='projects-parent gap-40 min-h-screen w-full bg-neutral-900 justify-center flex flex-col items-center p-10 overflow-hidden'>
+    <div className='projects-parent gap-40 h-full w-full bg-neutral-900 justify-center flex flex-col items-center p-10 overflow-hidden'>
       <h1 className='projects-title text-white leading-none text-[150px]'>
         MY PROJECTS
       </h1>
       <div className='flex flex-col gap-4'>
+        <div className='project-trigger flex gap-2'>
+          <h2 className='project-text'>PROJECT</h2>
+          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+        </div>
+        <div className='project-trigger flex gap-2'>
+          <h2 className='project-text'>PROJECT</h2>
+          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+        </div>
+        <div className='project-trigger flex gap-2'>
+          <h2 className='project-text'>PROJECT</h2>
+          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+        </div>
         <div className='project-trigger flex gap-2'>
           <h2 className='project-text'>PROJECT</h2>
           <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
