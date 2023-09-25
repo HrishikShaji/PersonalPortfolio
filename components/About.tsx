@@ -40,8 +40,7 @@ export const About = () => {
         trigger: splitTypes,
         pin: customPin,
         start: 'top center',
-        end: 'bottom center',
-        markers: true
+        end: 'bottom center'
       }
     })
   }, [])
