@@ -32,54 +32,56 @@ export const Projects = () => {
     })
 
     console.log(projectTrigger)
-    gsap.utils.toArray('.project-trigger').forEach((trigger) => {
-      gsap.to(trigger, {
-        x: 300,
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: trigger,
-          scrub: true
-        }
-      })
-      gsap.to(trigger, {
-        y: -100,
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: trigger,
-          scrub: true
-        }
+    const triggers = gsap.utils.toArray('.project-trigger')
+    triggers.forEach((trigger, index) => {
+      const tl = gsap.timeline()
+      tl.from(trigger, { x: 300, y: 100 })
+      ScrollTrigger.create({
+        trigger: trigger,
+        animation: tl,
+        markers: true,
+        scrub: 1,
+        start: 'top 80%',
+        end: 'bottom end'
       })
     })
   }, [])
   return (
-    <div className='projects-parent gap-40 h-full w-full bg-neutral-900 justify-center flex flex-col items-center p-10 overflow-hidden'>
+    <div className='projects-parent gap-10 h-full w-full bg-neutral-900 justify-center flex flex-col items-center p-10 overflow-hidden'>
       <h1 className='projects-title text-white leading-none text-[150px]'>
         MY PROJECTS
       </h1>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col w-full gap-4'>
         <div className='project-trigger flex gap-2'>
-          <h2 className='project-text'>PROJECT</h2>
-          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
+        </div>
+
+        <div className='project-trigger flex gap-2'>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
         </div>
         <div className='project-trigger flex gap-2'>
-          <h2 className='project-text'>PROJECT</h2>
-          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
         </div>
         <div className='project-trigger flex gap-2'>
-          <h2 className='project-text'>PROJECT</h2>
-          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
         </div>
         <div className='project-trigger flex gap-2'>
-          <h2 className='project-text'>PROJECT</h2>
-          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
         </div>
         <div className='project-trigger flex gap-2'>
-          <h2 className='project-text'>PROJECT</h2>
-          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
         </div>
         <div className='project-trigger flex gap-2'>
-          <h2 className='project-text'>PROJECT</h2>
-          <div className='project-image h-20 w-20 bg-neutral-600 rounded-md'></div>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
+        </div>
+        <div className='project-trigger flex gap-2'>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
+        </div>
+        <div className='project-trigger flex gap-2'>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
+        </div>
+        <div className='project-trigger flex gap-2'>
+          <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
         </div>
       </div>
     </div>
