@@ -127,7 +127,7 @@ export const Projects = () => {
           <div className='project-trigger flex gap-2'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 15</h2>
           </div>
-          <h1 className='text-[150px]'>LIKE WHAT YOU SEE?THEN CONTACT ME</h1>
+          <h1 className='text-[150px]'>LIKE WHAT YOU SEE?CONTACT ME</h1>
         </div>
         <div className='fake-container h-screen flex-1'></div>
       </div>
