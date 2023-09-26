@@ -33,7 +33,8 @@ export const Projects = () => {
         trigger: projectsContainer,
         pin: projectsTitle,
         start: 'top 30%',
-        end: 'bottom bottom'
+        end: 'bottom bottom',
+        markers: true
       }
     })
     gsap.to(projectsContainer, {
@@ -48,15 +49,16 @@ export const Projects = () => {
     console.log(projectTrigger)
     const triggers = gsap.utils.toArray('.project-trigger')
     triggers.forEach((trigger, index) => {
-      const tl = gsap.timeline()
-      tl.from(trigger, { x: 900, y: 100, opacity: 0, stagger: 0.2 })
-      ScrollTrigger.create({
-        trigger: projectsContainer,
-        endTrigger: projectsContainer,
-        animation: tl,
-        scrub: 1,
-        start: 'top 80%',
-        end: 'bottom bottom'
+      gsap.from(trigger, {
+        x: 900,
+        y: 100,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: trigger,
+          scrub: 1,
+          start: 'top 80%',
+          end: 'bottom 50%'
+        }
       })
     })
 
@@ -67,8 +69,7 @@ export const Projects = () => {
         pin: fakeContainer,
         start: 'top top',
         end: 'bottom bottom',
-        scrub: 1,
-        markers: true
+        scrub: 1
       }
     })
   }, [])
@@ -78,7 +79,7 @@ export const Projects = () => {
         MY PROJECTS
       </h1>
       <div className='flex w-full'>
-        <div className='projects-container flex flex-col flex-1 w-full gap-10'>
+        <div className='projects-container h-[200vh] flex flex-col flex-1 w-full gap-10'>
           <div className='project-trigger flex gap-2'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
           </div>
@@ -126,6 +127,7 @@ export const Projects = () => {
           <div className='project-trigger flex gap-2'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 15</h2>
           </div>
+          <h1 className='text-[150px]'>LIKE WHAT YOU SEE?THEN CONTACT ME</h1>
         </div>
         <div className='fake-container h-screen flex-1'></div>
       </div>
