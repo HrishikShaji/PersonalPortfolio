@@ -7,19 +7,16 @@ import SplitType from 'split-type'
 export const About = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    const splitTypes = document.querySelectorAll('.reveal-type')
-    splitTypes.forEach((char, i) => {
-      const text = new SplitType(char, { types: 'lines,words' })
-      gsap.from(text.words, {
-        scrollTrigger: {
-          trigger: char,
-          start: 'top center',
-          end: 'bottom center',
-          scrub: 1
-        },
-        opacity: 0.2,
-        stagger: 0.5
-      })
+    const text = new SplitType('.reveal-type', { types: 'lines, words' })
+    gsap.from(text.words, {
+      scrollTrigger: {
+        trigger: text.words,
+        start: 'top center',
+        end: 'bottom top',
+        scrub: 1
+      },
+      opacity: 0.2,
+      stagger: 0.5
     })
     const about = document.querySelector('.about')
     const timeline = gsap.timeline({
@@ -27,7 +24,7 @@ export const About = () => {
         trigger: about,
         start: 'top 35%',
         end: 'top top',
-        scrub: 2,
+        scrub: 2
       }
     })
     timeline
