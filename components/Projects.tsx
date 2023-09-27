@@ -33,8 +33,7 @@ export const Projects = () => {
         trigger: projectsContainer,
         pin: projectsTitle,
         start: 'top 30%',
-        end: 'bottom bottom',
-        markers: true
+        end: 'bottom bottom'
       }
     })
     gsap.to(projectsContainer, {

@@ -14,8 +14,7 @@ export const Contact = () => {
       scaleY: 0,
       scrollTrigger: {
         trigger: contactContainer,
-        start: 'top 99%',
-        markers: true
+        start: 'top 99%'
       }
     })
   }, [])

@@ -37,9 +37,7 @@ export const Skills = () => {
         trigger: skillContainers,
         pin: targetDiv,
         start: 'top top',
-        end: 'center top',
-
-        markers: true
+        end: 'center top'
       }
     })
   }, [])

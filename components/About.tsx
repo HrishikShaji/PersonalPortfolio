@@ -9,49 +9,48 @@ export const About = () => {
     gsap.registerPlugin(ScrollTrigger)
     const splitTypes = document.querySelectorAll('.reveal-type')
     splitTypes.forEach((char, i) => {
-      const text = new SplitType(char, { types: 'chars' })
-      gsap.from(text.chars, {
+      const text = new SplitType(char, { types: 'lines,words' })
+      gsap.from(text.words, {
         scrollTrigger: {
           trigger: char,
-          start: 'top 50%',
-          end: 'top 20%',
-          scrub: true
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 1
         },
         opacity: 0.2,
         stagger: 0.5
       })
     })
     const about = document.querySelector('.about')
-    gsap.from(about, {
+    const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: about,
-        start: 'top 70%',
-        end: 'top 30%',
-        scrub: true
-      },
-      opacity: 0.2,
-      y: -250,
-      x: 500
+        start: 'top 35%',
+        end: 'top top',
+        scrub: 2,
+      }
     })
+    timeline
+      .fromTo(about, { y: -550, x: 900 }, { y: -550, x: 0 })
+      .to(about, { y: 0 })
 
     const customPin = document.querySelector('.custom-pin')
+    const revealParent = document.querySelector('.reveal-parent')
     gsap.to(customPin, {
       scrollTrigger: {
-        trigger: splitTypes,
+        trigger: revealParent,
         pin: customPin,
-        start: 'top center',
-        end: 'bottom center'
+        start: 'top top',
+        end: 'bottom bottom'
       }
     })
   }, [])
   return (
-    <div className='h-full w-full bg-neutral-900 p-10 pt-[300px] flex '>
-      <div className='w-[30%]'>
-        <div className='custom-pin'>
-          <h1 className='about text-white text-[150px]'>ABOUT ME</h1>
-        </div>
+    <div className='h-full w-full bg-neutral-900 p-10 pt-[300px]  flex '>
+      <div className='custom-pin h-screen w-[30%] flex  items-center'>
+        <h1 className='about text-white text-[150px]'>ABOUT ME</h1>
       </div>
-      <div className='w-[70%] flex items-center pt-40'>
+      <div className='reveal-parent w-[70%] flex items-center'>
         <p className='reveal-type text-4xl font-semibold'>
           My name is Hrishik Shaji.I'm 23 years old.I'm from
           Thrissur,Kerala,India.I'm a son,a brother and a good friend for a
