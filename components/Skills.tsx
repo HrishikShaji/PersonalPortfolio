@@ -9,27 +9,32 @@ export const Skills = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
     const skills = document.querySelector('.skills')
-    gsap.fromTo(
-      skills,
-      {
-        y: -550,
-        x: 300,
-        opacity: 0.3,
-        scale: 0.1
-      },
-      {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        scale: 1,
-        scrollTrigger: {
-          trigger: targetRef.current,
-          start: 'top 75%',
-          end: 'center center',
-          scrub: true
-        }
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: targetRef.current,
+        start: 'top 75%',
+        end: 'center center',
+        scrub: 1
       }
-    )
+    })
+
+    timeline
+      .fromTo(
+        skills,
+        {
+          y: -600,
+          x: 500,
+          opacity: 0
+        },
+        {
+          y: -400,
+          x: 500,
+          opacity: 1
+        }
+      )
+      .to(skills, { y: -350, x: 0 })
+      .to(skills, { y: 0 })
+
     const skillContainers = document.querySelector('.skillcontainer')
     const targetDiv = document.querySelector('.target-div')
     gsap.to(targetDiv, {
