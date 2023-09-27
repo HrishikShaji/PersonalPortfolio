@@ -9,9 +9,6 @@ export const Projects = () => {
     gsap.registerPlugin(ScrollTrigger)
 
     const projectsTitle = document.querySelector('.projects-title')
-    const projectsParent = document.querySelector('.projects-parent')
-
-    const titleParent = document.querySelector('title-parent')
     const projectsContainer = document.querySelector('.projects-container')
     const projectTrigger = document.querySelectorAll('.project-trigger')
     gsap.fromTo(
@@ -47,13 +44,13 @@ export const Projects = () => {
 
     console.log(projectTrigger)
     const triggers = gsap.utils.toArray('.project-trigger')
-    triggers.forEach((trigger, index) => {
-      gsap.from(trigger, {
+    triggers.forEach((trigger) => {
+      gsap.from(trigger as HTMLElement, {
         x: 900,
         y: 100,
         opacity: 0,
         scrollTrigger: {
-          trigger: trigger,
+          trigger: trigger as HTMLElement,
           scrub: 1,
           start: 'top 80%',
           end: 'bottom 50%'
