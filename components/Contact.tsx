@@ -23,7 +23,6 @@ export const Contact = () => {
             trigger: input,
             start: 'top 70%',
             end: 'bottom 75%',
-            markers: true,
             scrub: 1
           }
         }
@@ -37,7 +36,6 @@ export const Contact = () => {
             trigger: input,
             start: 'top 70%',
             end: 'bottom 75%',
-            markers: true,
             scrub: 3
           }
         }

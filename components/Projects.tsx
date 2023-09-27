@@ -79,51 +79,50 @@ export const Projects = () => {
       </h1>
       <div className='flex w-full'>
         <div className='projects-container h-[200vh] flex flex-col flex-1 w-full gap-10'>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 1</h2>
           </div>
 
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 2</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 3</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 4</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 5</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 6</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 7</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 8</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 9</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 10</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 11</h2>
           </div>
-
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 12</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 13</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 14</h2>
           </div>
-          <div className='project-trigger flex gap-2'>
+          <div className='project-trigger flex gap-2 border-b-2 border-white'>
             <h2 className='project-text text-2xl font-semibold'>PROJECT 15</h2>
           </div>
           <h1 className='text-[150px]'>LIKE WHAT YOU SEE?CONTACT ME</h1>
