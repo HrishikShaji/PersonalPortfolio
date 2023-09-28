@@ -76,7 +76,8 @@ export const Skills = () => {
   }, [])
   return (
     <div className='bg-neutral-900 w-full flex'>
-      <div className='skillcontainer left-side h-[200vh] w-[35%] flex flex-col items-center justify-around'>
+      <h1 className='text-6xl'>MY SKILLS</h1>
+      <div className='sm:skillcontainer sm:left-side h-[200vh] w-[35%] flex flex-col items-center justify-around'>
         <h2 className='font-semibold text-3xl'>HTML</h2>
         <h2 className='font-semibold text-3xl'>CSS</h2>
         <h2 className='font-semibold text-3xl'>JAVASCRIPT</h2>
@@ -86,11 +87,11 @@ export const Skills = () => {
       </div>
       <div
         ref={targetRef}
-        className='target-div h-screen w-[30%]  flex justify-center items-end'
+        className='sm:target-div h-screen w-[30%] hidden sm:block  flex justify-center items-end'
       >
-        <h1 className='skills text-[150px]'>MY SKILLS</h1>
+        <h1 className='sm:skills text-[150px]'>MY SKILLS</h1>
       </div>
-      <div className='skillcontainer right-side h-[200vh] w-[35%]  flex flex-col items-center justify-around'>
+      <div className='sm:skillcontainer sm:right-side h-[200vh] w-[35%]  flex flex-col items-center justify-around'>
         <h2 className='font-semibold text-3xl'>REACT JS</h2>
         <h2 className='font-semibold text-3xl'>NEXTJS</h2>
         <h2 className='font-semibold text-3xl'>EXPRESS JS</h2>

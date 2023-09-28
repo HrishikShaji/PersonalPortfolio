@@ -36,7 +36,7 @@ export const Hero = () => {
 
   return (
     <div className='h-screen w-full bg-neutral-900 flex flex-col justify-center items-center'>
-      <h1 id='text' className='custom-clip  text-[300px] flex'>
+      <h1 id='text' className='custom-clip text-6xl  sm:text-[300px] flex'>
         {splitWord()}
       </h1>
       <div>
