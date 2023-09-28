@@ -20,8 +20,6 @@ export const About = () => {
     })
     const about = document.querySelector('.about')
 
-    let mediaQuery = gsap.matchMedia()
-
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: about,
@@ -31,6 +29,7 @@ export const About = () => {
       }
     })
 
+    let mediaQuery = gsap.matchMedia()
     mediaQuery.add(
       {
         isMobile: '(max-width:640px)',

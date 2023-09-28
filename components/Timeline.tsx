@@ -10,27 +10,41 @@ export const Timeline = () => {
 
     const sections = gsap.utils.toArray('.container')
     const targetContainer = document.querySelector('.target-container')
-    console.log(targetContainer)
-    let scrollTween = gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: targetContainer,
-        pin: true,
-        scrub: 1,
-        end: '+=3000',
-        markers: true
+
+    let mediaQuery = gsap.matchMedia()
+    mediaQuery.add(
+      {
+        isMobile: '(max-width:640px)',
+        isTablet: '(min-width:641px)',
+        isDesktop: '(min-width:1024px)'
+      },
+      (context) => {
+        let { isTablet, isMobile, isDesktop } = context?.conditions
+
+        if (isDesktop) {
+          gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: 'none',
+            scrollTrigger: {
+              trigger: targetContainer,
+              pin: true,
+              scrub: 1,
+              end: '+=3000',
+              markers: true
+            }
+          })
+        }
       }
-    })
+    )
   }, [])
   return (
     <div
       ref={targetRef}
-      className='h-full sm:h-screen sm:target-container w-full p-10  bg-neutral-900 overflow-x-hidden'
+      className='h-full sm:h-screen target-container w-full p-10  bg-neutral-900 overflow-x-hidden'
     >
       <h1 className='text-6xl sm:text-[150px]'>MY TIMELINE</h1>
       <div className='flex sm:w-[600vh] w-full mt-20 sm:mt-0 flex-col sm:flex-row gap-10 sm:gap-0'>
-        <section className='sm:container sm:p-20'>
+        <section className='container sm:p-20'>
           <div className='flex flex-col gap-2'>
             <h2 className='text-3xl'>SSLC</h2>
             <span className='text-xl '>2015</span>
@@ -38,7 +52,7 @@ export const Timeline = () => {
             <p>I passed SSLC with 98% marks and everything was going well.</p>
           </div>
         </section>
-        <section className='sm:container sm:p-20'>
+        <section className='container sm:p-20'>
           <div className='flex flex-col gap-2'>
             <h2 className='text-3xl'>PLUS TWO</h2>
             <span className='text-xl '>2017</span>
@@ -51,7 +65,7 @@ export const Timeline = () => {
             </p>
           </div>
         </section>
-        <section className='sm:container sm:p-20'>
+        <section className='container sm:p-20'>
           <div className='flex flex-col gap-2'>
             <h2 className='text-3xl'>B.Sc Computer Science</h2>
             <span className='text-xl '>2020</span>
@@ -68,7 +82,7 @@ export const Timeline = () => {
           </div>
         </section>
 
-        <section className='sm:container sm:p-20'>
+        <section className='container sm:p-20'>
           <div className='flex flex-col gap-2'>
             <h2 className='text-3xl'>CCNA & RHCE Internship</h2>
             <span className='text-xl '>2021</span>
@@ -81,7 +95,7 @@ export const Timeline = () => {
             </p>
           </div>
         </section>
-        <section className='sm:container sm:p-20'>
+        <section className='container sm:p-20'>
           <div className='flex flex-col gap-2'>
             <h2 className='text-3xl'>Full Stack Web Development</h2>
             <span className='text-xl '>2023</span>
