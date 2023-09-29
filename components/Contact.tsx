@@ -8,7 +8,6 @@ export const Contact = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
-    const contactContainer = document.querySelector('.contact-container')
     const inputContainer = document.querySelectorAll('.input-container')
     inputContainer.forEach((input) => {
       const line = input.querySelector('div')

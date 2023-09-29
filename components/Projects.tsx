@@ -22,7 +22,8 @@ export const Projects = () => {
         isDesktop: '(min-width:1024px)'
       },
       (context) => {
-        let { isTablet, isMobile, isDesktop } = context?.conditions
+        let { isTablet, isMobile, isDesktop } =
+          context?.conditions as gsap.Conditions
 
         if (isDesktop) {
           gsap.fromTo(
