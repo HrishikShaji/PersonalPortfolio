@@ -59,12 +59,12 @@ export const About = () => {
     })
   }, [])
   return (
-    <div className='h-full w-full bg-neutral-900 p-10 sm:pt-[300px]  flex sm:flex-row flex-col'>
+    <div className='h-full w-full bg-neutral-900 p-10 sm:pt-[300px] gap-10 sm:gap-0 flex sm:flex-row flex-col'>
       <div className='custom-pin sm:h-screen sm:w-[30%] flex  items-center'>
         <h1 className='about text-white text-6xl sm:text-[150px]'>ABOUT ME</h1>
       </div>
       <div className='reveal-parent w-full sm:w-[70%] flex items-center'>
-        <p className='reveal-type text-xl sm:text-4xl font-semibold'>
+        <p className='reveal-type  sm:text-4xl font-semibold'>
           My name is Hrishik Shaji.I'm 23 years old.I'm from
           Thrissur,Kerala,India.I'm a son,a brother and a good friend for a
           handful of people. After 10th, i took computer science for plus two

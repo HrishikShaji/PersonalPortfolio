@@ -40,10 +40,10 @@ export const Timeline = () => {
   return (
     <div
       ref={targetRef}
-      className='h-full sm:h-screen target-container w-full p-10  bg-neutral-900 overflow-x-hidden'
+      className='h-full sm:h-screen target-container w-full p-10 flex flex-col sm:flex-none gap-10 sm:gap-0  bg-neutral-900 overflow-x-hidden'
     >
-      <h1 className='text-6xl sm:text-[150px]'>MY TIMELINE</h1>
-      <div className='flex sm:w-[600vh] w-full mt-20 sm:mt-0 flex-col sm:flex-row gap-10 sm:gap-0'>
+      <h1 className='text-6xl sm:text-[150px] '>MY TIMELINE</h1>
+      <div className='flex sm:w-[600vh] w-full  flex-col sm:flex-row gap-10 sm:gap-0'>
         <section className='container sm:p-20'>
           <div className='flex flex-col gap-2'>
             <h2 className='text-3xl'>SSLC</h2>
