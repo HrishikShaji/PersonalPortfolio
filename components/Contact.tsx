@@ -43,8 +43,9 @@ export const Contact = () => {
     })
   }, [])
   return (
-    <div className='contact-container h-full w-full bg-neutral-900 p-10 flex pb-40 flex-col'>
-      <form className='flex flex-col w-[70%] gap-2'>
+    <div className='contact-container h-full w-full bg-neutral-900 p-10 flex pb-40 gap-10 flex-col'>
+      <h1 className='text-6xl sm:hidden'>CONTACT ME</h1>
+      <form className='flex flex-col w-fukk  sm:w-[70%] gap-2 '>
         <div className='input-container'>
           <input
             className='inputs bg-transparent origin-left  p-2 w-full focus:outline-none'

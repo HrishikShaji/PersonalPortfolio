@@ -36,19 +36,21 @@ export const Hero = () => {
 
   return (
     <div className='h-screen w-full bg-neutral-900 flex flex-col justify-center items-center'>
-      <h1 id='text' className='custom-clip text-6xl  sm:text-[300px] flex'>
-        {splitWord()}
-      </h1>
-      <div>
-        <h2>I'M A WEB DEVELOPER</h2>
-        <h2>
-          <Link
-            href='https://github.com/HrishikShaji'
-            className='z-50 cursor-pointer pointer-events-auto'
-          >
-            GITHUB
-          </Link>
-        </h2>
+      <div className=' gap-10'>
+        <h1 id='text' className='custom-clip text-6xl  sm:text-[300px] flex'>
+          {splitWord()}
+        </h1>
+        <div className='font-semibold'>
+          <h2>I'M A WEB DEVELOPER</h2>
+          <h2>
+            <Link
+              href='https://github.com/HrishikShaji'
+              className='z-50 cursor-pointer pointer-events-auto'
+            >
+              GITHUB
+            </Link>
+          </h2>
+        </div>
       </div>
     </div>
   )

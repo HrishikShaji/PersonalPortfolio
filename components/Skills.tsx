@@ -92,16 +92,16 @@ export const Skills = () => {
     )
   }, [])
   return (
-    <div className='bg-neutral-900 w-full flex flex-col sm:flex-row p-10'>
+    <div className='bg-neutral-900 w-full flex flex-col sm:flex-row p-10 gap-10 sm:gap-0'>
       <h1 className='text-6xl sm:hidden'>MY SKILLS</h1>
-      <div className='flex w-full'>
-        <div className='skillcontainer left-side h-[200vh] w-[35%] flex flex-col items-center justify-around'>
-          <h2 className='font-semibold text-xl sm:text-3xl'>HTML</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>CSS</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>JAVASCRIPT</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>TYPECRIPT</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>TAILWIND CSS</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>GSAP</h2>
+      <div className='flex w-full justify-between sm:justify-normal'>
+        <div className='skillcontainer left-side sm:h-[200vh] w-[35%] flex flex-col sm:items-center justify-around'>
+          <h2 className='font-semibold sm:text-3xl'>HTML</h2>
+          <h2 className='font-semibold  sm:text-3xl'>CSS</h2>
+          <h2 className='font-semibold sm:text-3xl'>JAVASCRIPT</h2>
+          <h2 className='font-semibold  sm:text-3xl'>TYPECRIPT</h2>
+          <h2 className='font-semibold  sm:text-3xl'>TAILWIND CSS</h2>
+          <h2 className='font-semibold  sm:text-3xl'>GSAP</h2>
         </div>
         <div
           ref={targetRef}
@@ -109,13 +109,13 @@ export const Skills = () => {
         >
           <h1 className='skills text-[150px]'>MY SKILLS</h1>
         </div>
-        <div className='skillcontainer right-side h-[200vh] w-[35%]  flex flex-col items-center justify-around'>
-          <h2 className='font-semibold text-xl sm:text-3xl'>REACT JS</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>NEXTJS</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>EXPRESS JS</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>NODE JS</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>MONGODB</h2>
-          <h2 className='font-semibold text-xl sm:text-3xl'>FIREBASE</h2>
+        <div className='skillcontainer right-side sm:h-[200vh] w-[35%]  flex flex-col sm:items-center justify-around'>
+          <h2 className='font-semibold  sm:text-3xl'>REACT JS</h2>
+          <h2 className='font-semibold  sm:text-3xl'>NEXTJS</h2>
+          <h2 className='font-semibold  sm:text-3xl'>EXPRESS JS</h2>
+          <h2 className='font-semibold  sm:text-3xl'>NODE JS</h2>
+          <h2 className='font-semibold  sm:text-3xl'>MONGODB</h2>
+          <h2 className='font-semibold  sm:text-3xl'>FIREBASE</h2>
         </div>
       </div>
     </div>
